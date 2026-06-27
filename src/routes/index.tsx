@@ -1,29 +1,60 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { profile } from "@/data/profile";
+import { ModeProvider } from "@/components/os/mode";
+import { TopNav } from "@/components/os/nav";
+import { Hero } from "@/components/os/hero";
+import { ExperienceSection, TimelineSection } from "@/components/os/sections";
+import { SkillsSection } from "@/components/os/skills";
+import { ProjectsSection } from "@/components/os/projects";
+import { GithubSection } from "@/components/os/github";
+import { ContactSection } from "@/components/os/contact";
+import { Footer } from "@/components/os/footer";
+import { CommandPalette } from "@/components/os/command-palette";
+import { TerminalPanel } from "@/components/os/terminal";
+import { AIAssistant } from "@/components/os/assistant";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: `${profile.name} — ${profile.title}` },
+      { name: "description", content: `${profile.name}: ${profile.title}. ${profile.tagline}` },
+      { property: "og:title", content: `${profile.name} — ${profile.title}` },
+      { property: "og:description", content: profile.tagline },
+      { property: "og:type", content: "profile" },
+      { name: "twitter:title", content: `${profile.name} — ${profile.title}` },
+      { name: "twitter:description", content: profile.tagline },
     ],
   }),
-  component: Index,
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
+  const [palette, setPalette] = useState(false);
+  const [terminal, setTerminal] = useState(false);
+  const [assistant, setAssistant] = useState(false);
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <ModeProvider>
+      <div id="top" className="relative min-h-screen">
+        <TopNav onOpenPalette={() => setPalette(true)} onOpenTerminal={() => setTerminal(true)} onOpenAssistant={() => setAssistant(true)} />
+
+        <main>
+          <Hero onOpenPalette={() => setPalette(true)} onOpenAssistant={() => setAssistant(true)} />
+          <ExperienceSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <TimelineSection />
+          <GithubSection />
+          <ContactSection />
+        </main>
+
+        <Footer />
+
+        <CommandPalette open={palette} setOpen={setPalette} onOpenTerminal={() => setTerminal(true)} onOpenAssistant={() => setAssistant(true)} />
+        <TerminalPanel open={terminal} setOpen={setTerminal} />
+        <AIAssistant open={assistant} setOpen={setAssistant} />
+      </div>
+    </ModeProvider>
   );
 }
