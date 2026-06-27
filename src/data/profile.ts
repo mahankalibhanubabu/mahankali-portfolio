@@ -9,10 +9,10 @@ export const profile = {
   timezone: "Asia/Kolkata (UTC+5:30)",
   availability: "Open to opportunities",
   email: "mahankalibhanubabu232323@gmail.com",
-  phone: "+919014325589",
+  phone: "+91 9014325589",
   phoneDisplay: "+91 90143 25589",
   linkedin: "https://www.linkedin.com/in/mahankali-bhanubabu-devops-developer/",
-  github: "https://github.com/mahankalibhanu",
+  github: "https://github.com/mahankalibhanubabu",
   githubUser: "mahankalibhanu",
   resumeUrl: "/bhanu-resume.pdf",
 } as const;
