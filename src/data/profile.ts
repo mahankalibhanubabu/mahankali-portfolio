@@ -48,8 +48,35 @@ export const experience: ExperienceItem[] = [
     bullets: [
       "Configured Salesforce CRM — users, profiles, permission sets, validation rules, workflows, custom objects, reports, dashboards.",
       "Worked with Flow, Process Builder, and Apex fundamentals across CRM admin, security, automation, customization, and deployment.",
+      "Assisted in data management activities, including data import/export, data quality checks, and duplicate record management using Salesforce Data Loader and standard CRM tools.",
+      "Created page layouts, custom fields, list views, and Lightning record pages to improve user experience while following Salesforce best practices and security standards."
     ],
-    stack: ["Salesforce", "Apex", "Flow", "Process Builder", "CRM"],
+    stack: ["Salesforce", "Apex", "Flow", "Process Builder"],
+  },
+  {
+    company: "IoT ESSENSE",
+    role: "Vice President",
+    period: "Nov 2023 — Nov 2024",
+    location: "Hyderabad, India",
+    bullets: [
+      'Lead "IoT Essense" as Vice President, driving strategic initiatives and fostering collaboration to advance understanding and application of IoT technologies within the community',
+      'Spearhead innovative projects and facilitate knowledge exchange among members to explore and implement IoT solutions for addressing real-world challenges',
+      'Ensure "IoT Essense" maintains a leading position in IoT developments through effective leadership, engagement, and contribution to technological progress and societal impact'
+    ],
+    stack: ['IoT', 'Leadership', 'Strategic Planning', 'Project Management'],
+  },
+  {
+    company: "Vinsense Technologies",
+    role: "Java Developer — Virtual Intern",
+    period: "Nov 2023 - April 2024",
+    location: "Remote",
+    bullets: [
+      "Developed CloudAuth, a secure user management web application using Java and SQL, implementing user registration, authentication, and role-based access control.",
+      "Designed and integrated a relational SQL database to securely store and manage user credentials while ensuring data integrity and efficient retrieval.",
+      "Implemented core backend functionalities, including CRUD operations, session handling, input validation, and exception handling following Java best practices.",
+      "Collaborated in the complete development lifecycle, including application design, development, testing, debugging, and documentation to deliver a functional and secure web application."
+    ],
+    stack: ['Java', 'SQL', 'Cloud Auth', 'User Management', 'Security'],
   },
 ];
 
@@ -65,7 +92,7 @@ export type Project = {
   roadmap: string[];
   github?: string;
   demo?: string;
-  status: "Production" | "Beta" | "R&D";
+  status: "Production" | "Beta" | "R&D" | "Completed";
 };
 
 export const projects: Project[] = [
@@ -115,7 +142,7 @@ export const projects: Project[] = [
       "Recruiter-side matching",
       "Skill verification via micro-assessments",
     ],
-    github: "https://github.com/mahankalibhanu",
+    github: "https://github.com/mahankalibhanubabu/CollegePath-AI---Your-Personalized-AI-Career-Coach",
     status: "Beta",
   },
   {
@@ -139,23 +166,334 @@ export const projects: Project[] = [
     roadmap: ["Blue/green deploys", "Auto-rollback on health failure"],
     status: "Production",
   },
+  {
+    slug: "industrialexpo",
+    name: "IndustrialExpo",
+    tagline: "Industrial online tender and procurement management platform.",
+    problem:
+      "Industrial organizations often rely on manual tender submission and procurement processes, causing delays and inefficiencies.",
+    solution:
+      "Built a centralized web platform for managing tenders, supplier participation, evaluation, and procurement workflows.",
+    architecture: [
+      "Responsive frontend using HTML, CSS and JavaScript",
+      "Tender submission and management modules",
+      "Procurement workflow and evaluation interface"
+    ],
+    stack: ["HTML", "CSS", "JavaScript"],
+    challenges: [
+      "Designing a simple procurement workflow",
+      "Creating an intuitive UI for tender management"
+    ],
+    roadmap: [
+      "Role-based authentication",
+      "Tender analytics dashboard"
+    ],
+    github: "https://github.com/mahankalibhanubabu/IndustrialExpo",
+    status: "Completed"
+  },
+
+  {
+    slug: "movieflix",
+    name: "MovieFlix",
+    tagline: "Real-time movie discovery platform.",
+    problem:
+      "Users need a fast and intuitive way to search, filter, and discover movies.",
+    solution:
+      "Developed a MERN-based movie search application with responsive UI, filtering, and personalized recommendations.",
+    architecture: [
+      "React frontend",
+      "Node.js & Express REST API",
+      "MongoDB database"
+    ],
+    stack: ["React", "Node.js", "Express", "MongoDB"],
+    challenges: [
+      "Optimizing search performance",
+      "Managing API responses efficiently"
+    ],
+    roadmap: [
+      "Watchlist",
+      "User reviews",
+      "AI recommendations"
+    ],
+    github: "https://github.com/mahankalibhanubabu/movieflix-react-",
+    status: "Completed"
+  },
+
+  {
+    slug: "shopvibe",
+    name: "ShopVibe",
+    tagline: "Modern MERN-based e-commerce platform.",
+    problem:
+      "Small businesses require scalable online shopping platforms with secure transactions.",
+    solution:
+      "Built a complete MERN e-commerce application supporting authentication, payments, shopping cart, order management, and admin dashboard.",
+    architecture: [
+      "React frontend",
+      "Express & Node backend",
+      "MongoDB database",
+      "Payment gateway integration"
+    ],
+    stack: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Redux",
+      "Tailwind CSS"
+    ],
+    challenges: [
+      "Secure authentication",
+      "Order workflow management",
+      "Payment integration"
+    ],
+    roadmap: [
+      "Inventory analytics",
+      "AI product recommendations"
+    ],
+    github: "https://github.com/mahankalibhanubabu/shopvibe",
+    demo: "https://preview--shopvibe.lovable.app/",
+    status: "Production"
+  },
+
+  {
+    slug: "advanced-weather-forecast",
+    name: "Advanced Weather Forecast",
+    tagline: "Hyper-local weather forecasting platform.",
+    problem:
+      "Users require accurate real-time weather updates and forecasting from a single dashboard.",
+    solution:
+      "Created a weather application consuming external APIs to display forecasts, alerts, maps, and historical weather insights.",
+    architecture: [
+      "React frontend",
+      "Node.js backend",
+      "REST Weather APIs"
+    ],
+    stack: ["React", "Node.js", "Express", "MongoDB", "REST API"],
+    challenges: [
+      "Handling API limits",
+      "Real-time weather updates"
+    ],
+    roadmap: [
+      "Radar maps",
+      "Location prediction"
+    ],
+    github: "https://github.com/mahankalibhanubabu/weather-forcasting-",
+    status: "Completed"
+  },
+
+  {
+    slug: "student-dashboard",
+    name: "Student Dashboard",
+    tagline: "Interactive e-learning management platform.",
+    problem: "Students need a centralized platform to manage courses, assignments, attendance, and learning progress while educators require tools to monitor student performance efficiently.",
+    solution: "Developed a full-stack student dashboard that enables personalized learning paths, real-time progress tracking, assignment management, and course administration through an intuitive interface.",
+    architecture: [
+      "React frontend with responsive UI",
+      "Node.js & Express REST API",
+      "MongoDB for student, course, and assignment data",
+      "JWT-based authentication and role management"
+    ],
+    stack: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+    github: "https://github.com/mahankalibhanubabu/student-dashboard",
+    challenges: [
+      "Implementing role-based access for students and administrators",
+      "Synchronizing real-time progress across multiple courses"
+    ],
+    roadmap: [
+      "AI-powered study recommendations",
+      "Live classroom integration",
+      "Attendance analytics dashboard"
+    ],
+    status: "Production"
+  },
+
+  {
+    slug: "eventflow",
+    name: "EventFlow",
+    tagline: "Smart online event management platform.",
+    problem: "Traditional event management involves multiple disconnected tools for registration, ticketing, attendee management, and analytics, making the process inefficient.",
+    solution: "Built a scalable MERN-based platform that allows organizers to create events, manage registrations, issue tickets, monitor attendees, and analyze event performance from a single dashboard.",
+    architecture: [
+      "React frontend with Tailwind CSS",
+      "Node.js & Express REST API",
+      "MongoDB database",
+      "Authentication with secure user sessions",
+      "Organizer and attendee dashboards"
+    ],
+    stack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+    demo: "https://eventflow-react-app.vercel.app/",
+    status: "Completed",
+    challenges: [
+      "Managing ticket availability in real time",
+      "Designing separate dashboards for organizers and attendees",
+      "Maintaining responsive performance across devices"
+    ],
+    roadmap: [
+      "QR code ticket verification",
+      "Payment gateway integration",
+      "AI-powered attendee insights"
+    ]
+  },
+
+  {
+    slug: "search-agent",
+    name: "Search Agent",
+    tagline: "AI-powered research automation.",
+    problem: "Professionals spend significant time manually researching information from multiple websites and compiling reports into documents.",
+    solution: "Built an AI automation that accepts user queries, performs intelligent web research, extracts relevant information, and automatically generates structured Google Docs reports.",
+    architecture: [
+      "AI workflow orchestration",
+      "Google Search API integration",
+      "Information extraction pipeline",
+      "Google Docs API for automated report generation"
+    ],
+    stack: ["AI Automation", "Google Search API", "Google Docs API", "LLM"],
+    status: "Production",
+    challenges: [
+      "Filtering irrelevant search results",
+      "Generating well-structured reports automatically",
+      "Handling different content sources consistently"
+    ],
+    roadmap: [
+      "PDF and Word export",
+      "Citation generation",
+      "Multi-language research support"
+    ]
+  },
+
+  {
+    slug: "claude-ai-bot",
+    name: "AI Bot",
+    tagline: "Conversational AI assistant powered by Claude.",
+    problem: "Users require fast, natural language interactions to obtain accurate answers without navigating multiple information sources.",
+    solution: "Developed an AI chatbot powered by Claude AI that understands user intent, answers questions, and delivers intelligent conversational responses in real time.",
+    architecture: [
+      "Claude AI API integration",
+      "Prompt engineering layer",
+      "Conversation state management",
+      "Responsive chat interface"
+    ],
+    stack: ["Claude AI", "AI Automation", "LLM", "Prompt Engineering"],
+    status: "Production",
+    challenges: [
+      "Reducing response latency",
+      "Maintaining conversational context",
+      "Improving answer accuracy through prompt engineering"
+    ],
+    roadmap: [
+      "Voice conversations",
+      "Multi-model AI support",
+      "Knowledge base integration"
+    ]
+  },
+
+  {
+    slug: "brand-monitoring",
+    name: "Brand Monitoring Automation",
+    tagline: "AI-powered online reputation monitoring.",
+    problem: "Tracking online brand mentions across multiple websites manually is time-consuming and often misses important insights.",
+    solution: "Created an AI-powered automation that searches the web for brand mentions, analyzes online presence, and generates comprehensive monitoring reports automatically.",
+    architecture: [
+      "Google Search integration",
+      "AI-powered content analysis",
+      "Report generation using Google Docs",
+      "Automated workflow execution"
+    ],
+    stack: ["AI Automation", "Google Search API", "Google Docs API", "LLM"],
+    status: "Production",
+    challenges: [
+      "Collecting relevant brand mentions",
+      "Summarizing large volumes of information",
+      "Generating meaningful business insights"
+    ],
+    roadmap: [
+      "Sentiment analysis",
+      "Competitor comparison",
+      "Scheduled monitoring reports"
+    ]
+  },
+
+  {
+    slug: "content-summarizer",
+    name: "Content Summarizer Agent",
+    tagline: "Summarize YouTube videos and web pages using AI.",
+    problem: "Reading lengthy articles and watching long videos consumes significant time when users only need the key insights.",
+    solution: "Developed an AI agent that processes YouTube videos and website URLs, extracts important information, and generates concise, easy-to-read summaries.",
+    architecture: [
+      "Content extraction pipeline",
+      "NLP-based summarization",
+      "LLM-powered text generation",
+      "URL processing workflow"
+    ],
+    stack: ["AI Automation", "NLP", "LLM", "Content Processing"],
+    status: "Production",
+    challenges: [
+      "Handling long-form content efficiently",
+      "Preserving important context while summarizing",
+      "Supporting different website formats"
+    ],
+    roadmap: [
+      "Multi-language summaries",
+      "Audio summaries",
+      "Key insights with mind maps"
+    ]
+  }
+
 ];
 
 export const skills = [
-  { group: "Workload Automation", score: 92, items: ["AutoSys", "Automic UC4", "SLA Monitoring", "Incident Mgmt", "RCA", "Change Mgmt"] },
+  { group: "Workload Automation", score: 92, items: ["AutoSys", "Automic UC4", "SLA Monitoring", "Incident Mgmt", "RCA"] },
   { group: "Linux & Scripting", score: 85, items: ["Linux", "Shell", "Cron", "Log Analysis"] },
   { group: "DevOps & Cloud", score: 80, items: ["Docker", "Jenkins", "GitHub Actions", "AWS", "Nginx", "Ansible", "Kubernetes"] },
   { group: "Backend & Data", score: 72, items: ["SQL", "REST APIs", "MongoDB", "Node.js", "Express"] },
-  { group: "Frontend", score: 70, items: ["React", "Next.js", "TypeScript", "Tailwind"] },
-  { group: "Observability", score: 75, items: ["Grafana", "ServiceNow", "Alerting"] },
+  { group: "Frontend", score: 70, items: ["React", "Next.js", "nest.js", "TypeScript", "Tailwind CSS"] },
+  { group: "Observability", score: 75, items: ["Grafana", "ServiceNow", "Alerting", "ITSM"] },
+  {
+    group: "AI Concepts",
+    score: 84,
+    items: [
+      "Prompt Engineering",
+      "Large Language Models (LLMs)",
+      "AI Agents",
+      "AI Workflows",
+      "AI Automation",
+      "Retrieval-Augmented Generation (RAG)",
+      "Model Context Protocol (MCP)"
+    ]
+  },
+  {
+    group: "Tools",
+    score: 90,
+    items: [
+      "Cursor",
+      "VS Code",
+      "Git",
+      "GitHub",
+      "GitHub Copilot",
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Lindy AI",
+      "Lovable",
+      "Bolt.new",
+      "v0",
+      "Trae",
+      "Zapier",
+      "Postman",
+      "Docker",
+      "Jenkins",
+      "Figma"
+    ]
+  },
 ] as const;
 
 export const timeline = [
+  { year: "2026", title: "Shipped Automic UC4 Self-Healing Framework", kind: "ship" as const },
   { year: "2025", title: "Workload Automation Engineer @ Miraki Technologies", kind: "work" as const },
   { year: "2025", title: "B.Sc. Computer Science, MREC — GPA 8.40", kind: "edu" as const },
-  { year: "2025", title: "Shipped Automic UC4 Self-Healing Framework", kind: "ship" as const },
   { year: "2024", title: "Salesforce Admin & Developer Virtual Internship", kind: "work" as const },
-  { year: "2024", title: "Built CollegePath AI + CI/CD pipeline", kind: "ship" as const },
+  { year: "2024", title: "Vice President @IoT essENSE", kind: "work" as const },
+  { year: "2024", title: "Cloudauth: Secure User Management System Internship", kind: "work" as const },
 ];
 
 export const stats = [
