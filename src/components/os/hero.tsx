@@ -72,7 +72,7 @@ export function Hero({ onOpenPalette, onOpenAssistant }: { onOpenPalette: () => 
                 download
                 className="magnetic magnetic-hover inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground glow-ring"
               >
-                <Download className="h-4 w-4" /> Download résumé
+                <Download className="h-4 w-4" /> Download Resume
               </a>
               <button
                 onClick={onOpenAssistant}
