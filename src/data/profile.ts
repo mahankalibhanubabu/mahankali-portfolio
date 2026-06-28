@@ -13,8 +13,8 @@ export const profile = {
   phoneDisplay: "+91 90143 25589",
   linkedin: "https://www.linkedin.com/in/mahankali-bhanubabu-devops-developer/",
   github: "https://github.com/mahankalibhanubabu",
-  githubUser: "mahankalibhanu",
-  resumeUrl: "/bhanu-resume.pdf",
+  githubUser: "mahankalibhanubabu",
+  resumeUrl: "public/bhanu-resume.pdf",
 } as const;
 
 export type ExperienceItem = {
@@ -38,7 +38,7 @@ export const experience: ExperienceItem[] = [
       "Partner with app, DB, and infra teams to resolve incidents and ship change requests across DEV / UAT / PROD.",
       "Support multiple enterprise clients with alert analysis, operational reporting, and continuous process improvements.",
     ],
-    stack: ["AutoSys", "Automic UC4", "Linux", "SQL", "ServiceNow", "Grafana"],
+    stack: ["AutoSys", "Automic UC4", "ITSM", "ServiceNow"],
   },
   {
     company: "Salesforce",
@@ -49,7 +49,7 @@ export const experience: ExperienceItem[] = [
       "Configured Salesforce CRM — users, profiles, permission sets, validation rules, workflows, custom objects, reports, dashboards.",
       "Worked with Flow, Process Builder, and Apex fundamentals across CRM admin, security, automation, customization, and deployment.",
     ],
-    stack: ["Salesforce", "Apex", "Flow", "Process Builder"],
+    stack: ["Salesforce", "Apex", "Flow", "Process Builder", "CRM"],
   },
 ];
 
