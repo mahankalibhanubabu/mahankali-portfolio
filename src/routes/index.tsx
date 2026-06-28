@@ -43,6 +43,7 @@ function Home() {
         <main>
           <Hero onOpenPalette={() => setPalette(true)} onOpenAssistant={() => setAssistant(true)} />
           <ExperienceSection />
+          <CertificationsSection />
           <SkillsSection />
           <ProjectsSection />
           <TimelineSection />
