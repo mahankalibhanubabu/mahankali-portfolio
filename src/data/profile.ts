@@ -502,3 +502,39 @@ export const stats = [
   { label: "MTTR reduction", value: "40%" },
   { label: "On-call incidents handled", value: "500+" },
 ];
+
+export type Certification = {
+  name: string;
+  issuer: string;
+  date: string;
+  credentialId?: string;
+  url?: string;
+  skills: string[];
+};
+
+export const certifications: Certification[] = [
+  {
+    name: "Salesforce Administrator & Developer",
+    issuer: "Salesforce",
+    date: "2024",
+    skills: ["Salesforce CRM", "Apex", "Flow", "Process Builder", "Security"],
+  },
+  {
+    name: "Java Developer — CloudAuth Secure User Management",
+    issuer: "Vinsense Technologies",
+    date: "2024",
+    skills: ["Java", "SQL", "Authentication", "RBAC", "Security"],
+  },
+  {
+    name: "Workload Automation & Enterprise Monitoring",
+    issuer: "Miraki Technologies",
+    date: "2025",
+    skills: ["AutoSys", "Automic UC4", "SLA Monitoring", "Incident Mgmt", "Linux"],
+  },
+  {
+    name: "AI Automation & Agent Development",
+    issuer: "Self-Certified Portfolio",
+    date: "2025 — 2026",
+    skills: ["LLMs", "RAG", "MCP", "Prompt Engineering", "AI Workflows"],
+  },
+];
