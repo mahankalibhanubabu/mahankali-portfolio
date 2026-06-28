@@ -5,6 +5,7 @@ import { ModeProvider } from "@/components/os/mode";
 import { TopNav } from "@/components/os/nav";
 import { Hero } from "@/components/os/hero";
 import { ExperienceSection, TimelineSection } from "@/components/os/sections";
+import { CertificationsSection } from "@/components/os/certifications";
 import { SkillsSection } from "@/components/os/skills";
 import { ProjectsSection } from "@/components/os/projects";
 import { GithubSection } from "@/components/os/github";
