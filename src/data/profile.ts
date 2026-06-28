@@ -513,28 +513,194 @@ export type Certification = {
 };
 
 export const certifications: Certification[] = [
+  // src/data/profile.ts
   {
     name: "Salesforce Administrator & Developer",
     issuer: "Salesforce",
     date: "2024",
-    skills: ["Salesforce CRM", "Apex", "Flow", "Process Builder", "Security"],
+    url: "https://drive.google.com/file/d/1qPz3oFh4oFawDlTa18KYbU7MJWnPCQx-/view",
+    skills: [
+      "Salesforce CRM",
+      "Apex",
+      "Flow",
+      "Process Builder",
+      "Validation Rules",
+      "Lightning",
+      "Security",
+      "Reports & Dashboards"
+    ],
   },
+
   {
-    name: "Java Developer — CloudAuth Secure User Management",
-    issuer: "Vinsense Technologies",
+    name: "Linux Operating Systems (CS401)",
+    issuer: "Saylor Academy",
+    date: "2026", // Replace with your actual completion year/month
+    url: "https://drive.google.com/file/d/1BDlIQHKBMWj3fWl9kJ0S6SjtwXkXVU1d/view?usp=sharing",
+    skills: [
+      "Linux",
+      "Linux CLI",
+      "File System Management",
+      "Process Management",
+      "Permissions",
+      "Shell Commands",
+      "Networking Basics",
+      "System Administration",
+      "System Troubleshooting",
+      "Automation"
+    ],
+  },
+
+  {
+    name: "Azure Fundamentals",
+    issuer: "Microsoft Azure",
     date: "2024",
-    skills: ["Java", "SQL", "Authentication", "RBAC", "Security"],
+    url: "https://drive.google.com/file/d/1bMEJakpgo7mARR6miePnRcXQsSkufdTg/view",
+    skills: [
+      "Microsoft Azure",
+      "Cloud Computing",
+      "Virtual Machines",
+      "Storage",
+      "Networking",
+      "Azure Services"
+    ],
   },
+
   {
-    name: "Workload Automation & Enterprise Monitoring",
-    issuer: "Miraki Technologies",
-    date: "2025",
-    skills: ["AutoSys", "Automic UC4", "SLA Monitoring", "Incident Mgmt", "Linux"],
+    name: "Accenture Developer Job Simulation",
+    issuer: "Accenture (Forage)",
+    date: "2024",
+    url: "https://drive.google.com/file/d/1vt0ksA57TH6jgBHREUh5OxY2cCg8R3v0/view",
+    skills: [
+      "Software Development",
+      "Problem Solving",
+      "SDLC",
+      "Business Analysis",
+      "Professional Communication"
+    ],
   },
+
   {
-    name: "AI Automation & Agent Development",
-    issuer: "Self-Certified Portfolio",
-    date: "2025 — 2026",
-    skills: ["LLMs", "RAG", "MCP", "Prompt Engineering", "AI Workflows"],
+    name: "Generative AI and ChatGPT",
+    issuer: "GeeksforGeeks",
+    date: "2024",
+    url: "https://drive.google.com/file/d/1xrENgqky1eg4N6SKzIQSdNUgBaxqj73-/view",
+    skills: [
+      "Generative AI",
+      "ChatGPT",
+      "Prompt Engineering",
+      "LLMs",
+      "AI Applications"
+    ],
   },
+
+  {
+    name: "Data Science and Analytics",
+    issuer: "HP LIFE",
+    date: "2024",
+    url: "https://drive.google.com/file/d/1jnn8AnS6oz2A1wuRaeGSYQaVSJvsW02b/view",
+    skills: [
+      "Data Science",
+      "Data Analytics",
+      "Data Visualization",
+      "Statistics",
+      "Business Intelligence"
+    ],
+  },
+
+  {
+    name: "Problem Solving (Basic)",
+    issuer: "HackerRank",
+    date: "2024",
+    url: "https://drive.google.com/file/d/1-Yf6miG7aFIx69n7HHg9eB77Kbx6AacW/view",
+    skills: [
+      "Algorithms",
+      "Problem Solving",
+      "Logical Thinking",
+      "Programming"
+    ],
+  },
+
+  {
+    name: "Java (Basic)",
+    issuer: "HackerRank",
+    date: "2024",
+    url: "https://drive.google.com/file/d/1MYZrUgh6-n1TJX6LHEjRYukZAmXyl4BQ/view",
+    skills: [
+      "Java",
+      "OOP",
+      "Collections",
+      "Exception Handling",
+      "Core Java"
+    ],
+  },
+
+  {
+    name: "JavaScript (Basic)",
+    issuer: "HackerRank",
+    date: "2024",
+    url: "https://drive.google.com/file/d/1SK0TjQ1pv08_1CO-LRKBp6cQLwn6uY1s/view",
+    skills: [
+      "JavaScript",
+      "ES6",
+      "DOM",
+      "Functions",
+      "Programming Fundamentals"
+    ],
+  },
+
+  {
+    name: "SQL (Intermediate)",
+    issuer: "HackerRank",
+    date: "2024",
+    url: "https://drive.google.com/file/d/1K6Sm4xqfgu8IvlFN90tNzGUsOCm6_3zL/view",
+    skills: [
+      "SQL",
+      "Joins",
+      "Subqueries",
+      "Database Design",
+      "Query Optimization"
+    ],
+  },
+
+  {
+    name: "Python (Basic)",
+    issuer: "HackerRank",
+    date: "2024",
+    url: "https://drive.google.com/file/d/1oxNGIpbQfX5xYAwjMkbGZPAH7bzaxh0F/view",
+    skills: [
+      "Python",
+      "Functions",
+      "Data Structures",
+      "Programming Fundamentals"
+    ],
+  },
+
+  {
+    name: "Software Engineer Intern",
+    issuer: "HackerRank",
+    date: "2024",
+    url: "https://drive.google.com/file/d/15oXXs3tYeCxRubgn73Swehc3amGJ5Rr0/view",
+    skills: [
+      "Software Engineering",
+      "Debugging",
+      "Problem Solving",
+      "Coding",
+      "Programming"
+    ],
+  },
+
+  {
+    name: "Software Engineer",
+    issuer: "HackerRank",
+    date: "2024",
+    url: "https://drive.google.com/file/d/1Jr-TSP_BVX1ORA2LFGCijD4MxgWoKcYv/view",
+    skills: [
+      "Software Engineering",
+      "Data Structures",
+      "Algorithms",
+      "Programming",
+      "System Design Fundamentals"
+    ],
+  }
+
 ];
