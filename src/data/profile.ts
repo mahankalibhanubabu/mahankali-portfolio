@@ -521,7 +521,7 @@ export const projects: Project[] = [
 export const skills = [
   { group: "Workload Automation", score: 92, items: ["AutoSys", "Automic UC4", "SLA Monitoring", "Incident Mgmt", "RCA"] },
   { group: "Linux & Scripting", score: 85, items: ["Linux", "Shell", "Cron", "Log Analysis"] },
-  { group: "DevOps & Cloud", score: 80, items: ["Docker", "Jenkins","Maven" "GitHub Actions", "AWS(EC2, S3, CloudWatch,IAM, Ngnix, Lambda, DynamoDB and ECS)","Ansible", "Kubernetes(ods, Deployments, Services, ConfigMaps)"] },
+  { group: "DevOps & Cloud", score: 80, items: ["Docker", "Jenkins","Maven","GitHub Actions", "AWS(EC2, S3, CloudWatch,IAM, Ngnix, Lambda, DynamoDB and ECS)","Ansible", "Kubernetes(ods, Deployments, Services, ConfigMaps)"] },
   { group: "Backend & Database", score: 72, items: ["SQL", "REST APIs","FAST APIs", "Lambda function","Amazon S3 ","MongoDB", "Node.js", "Express"] },
   { group: "Frontend", score: 70, items: ["React", "Next.js", "nest.js", "TypeScript", "Tailwind CSS"] },
   { group: "Observability", score: 75, items: ["Grafana", "prometheus ","ServiceNow", "Alerting", "ITSM"] },
