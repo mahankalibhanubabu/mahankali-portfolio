@@ -97,6 +97,83 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+  slug: "citizenconnect-india",
+  name: "CitizenConnect India",
+  tagline: "A unified civic services platform powered by cloud-native infrastructure.",
+  problem:
+    "Citizens rely on multiple disconnected government portals for complaints, welfare schemes, emergency services, and legal guidance, resulting in fragmented access and poor user experience.",
+  solution:
+    "Built a cloud-native civic services platform integrating grievance management, AI-assisted services, emergency support, and secure document management using a scalable AWS-based architecture.",
+  architecture: [
+    "React frontend communicates with AWS Lambda APIs for serverless request processing",
+    "Amazon DynamoDB stores citizen records, complaints, and application data with low-latency access",
+    "GitHub Actions automates Docker image builds and deployment to Amazon ECS",
+    "Nginx on Amazon EC2 serves as a reverse proxy and hosts the application",
+    "Amazon S3 securely stores user-uploaded documents and media assets"
+  ],
+  stack: [
+    "React",
+    "Node.js",
+    "Tailwind CSS",
+    "AWS Lambda",
+    "Amazon DynamoDB",
+    "Docker",
+    "GitHub Actions",
+    "Amazon ECS",
+    "Amazon EC2",
+    "Nginx",
+    "Amazon S3"
+  ],
+  challenges: [
+    "Designing a scalable cloud architecture with serverless backend services",
+    "Automating container deployments while ensuring secure storage of user documents"
+  ],
+  roadmap: [
+    "Add Kubernetes (Amazon EKS) deployment support",
+    "Implement CloudWatch monitoring and centralized logging"
+  ],
+  status: "Completed"
+},
+  {
+  slug: "ai-resume-screening-platform",
+  name: "AI Resume Screening & Evaluation Platform",
+  tagline: "Automated AI-powered resume analysis with cloud-native deployment.",
+  problem:
+    "Recruiters spend significant time manually reviewing resumes against job descriptions, resulting in slower hiring and inconsistent candidate evaluation.",
+  solution:
+    "Developed an AI-powered resume screening platform that automates candidate evaluation by comparing resumes with job descriptions using Gemini AI and workflow automation.",
+  architecture: [
+    "React frontend collects candidate information, resumes, and job descriptions",
+    "FastAPI backend validates requests and stores application data in Amazon DynamoDB",
+    "n8n webhook triggers an automated workflow that invokes the Gemini API for resume analysis",
+    "GitHub Actions builds Docker images and deploys containerized services to Amazon ECS",
+    "Nginx hosted on Amazon EC2 serves the application while Amazon S3 securely stores uploaded resumes"
+  ],
+  stack: [
+    "React",
+    "Node.js",
+    "FastAPI",
+    "Docker",
+    "GitHub Actions",
+    "Amazon ECS",
+    "Amazon EC2",
+    "Nginx",
+    "Amazon DynamoDB",
+    "Amazon S3",
+    "n8n",
+    "Gemini API"
+  ],
+  challenges: [
+    "Building an event-driven workflow integrating FastAPI, n8n, and Gemini AI",
+    "Managing secure file uploads and scalable cloud deployment with AWS services"
+  ],
+  roadmap: [
+    "Support multiple LLM providers (OpenAI, Claude, Gemini)",
+    "Add ATS score visualization and recruiter analytics dashboard"
+  ],
+  status: "Completed"
+},
+  {
     slug: "automic-self-healing",
     name: "Automic UC4 Self-Healing Job Framework",
     tagline: "Detect, recover, notify — without a human in the loop.",
