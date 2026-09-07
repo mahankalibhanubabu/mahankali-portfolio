@@ -97,6 +97,59 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+  slug: "canaryguard",
+  name: "CanaryGuard",
+  tagline:
+    "A GitOps-driven Kubernetes platform for safer canary deployments and failure detection.",
+
+  problem:
+    "Traditional application deployments expose all users to a new version at once, increasing the risk of service disruption, configuration errors, and difficult rollbacks. Manual deployment processes also make release tracking and health verification challenging.",
+
+  solution:
+    "Built a cloud-native deployment platform that automates application testing, Docker image publishing, Kubernetes manifest updates, GitOps synchronization, and deployment health verification. CanaryGuard also supports configurable failure simulation to evaluate application behavior during canary releases.",
+
+  architecture: [
+    "GitHub Actions runs application tests, builds Docker images, generates SHA-based image tags, and publishes images to GitHub Container Registry",
+    "Kustomize manages Kubernetes manifests and environment-specific deployment configurations",
+    "Argo CD continuously monitors Git-based manifests and synchronizes the desired state with the Kubernetes cluster",
+    "Kubernetes runs the containerized CanaryGuard application and manages application workloads",
+    "Configurable APP_VERSION and FAILURE_RATE environment variables support healthy and failure deployment scenarios",
+    "Deployment verification checks Argo CD synchronization status and application health after deployment"
+  ],
+
+  stack: [
+    "Node.js",
+    "Kubernetes",
+    "Docker",
+    "GitHub Actions",
+    "Argo CD",
+    "Kustomize",
+    "GitOps",
+    "GitHub Container Registry",
+    "Kind",
+    "YAML"
+  ],
+
+  challenges: [
+    "Connecting the CI/CD pipeline with a GitOps-based Kubernetes deployment workflow",
+    "Managing versioned Docker images and automatically updating Kubernetes image tags",
+    "Designing environment-specific Kubernetes configurations using Kustomize",
+    "Testing healthy and unhealthy application versions through controlled failure simulation",
+    "Verifying that GitOps synchronization completed successfully and the deployed application is healthy"
+  ],
+
+  roadmap: [
+    "Implement progressive traffic shifting with Argo Rollouts",
+    "Add automated rollback based on application health and failure-rate analysis",
+    "Integrate Prometheus and Grafana for monitoring and visualization",
+    "Add centralized logging and alert notifications",
+    "Introduce container security scanning and Kubernetes policy enforcement",
+    "Support multi-environment deployments and advanced canary analysis"
+  ],
+
+  status: "Completed"
+},
+  {
   slug: "citizenconnect-india",
   name: "CitizenConnect India",
   tagline: "A unified civic services platform powered by cloud-native infrastructure.",
