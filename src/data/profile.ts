@@ -29,7 +29,7 @@ export type ExperienceItem = {
 export const experience: ExperienceItem[] = [
   {
     company: "Miraki Technologies",
-    role: "Workload Automation Engineer",
+    role: "Enterprise Automation Engineer",
     period: "Aug 2025 — Present",
     location: "Hyderabad, India",
     bullets: [
