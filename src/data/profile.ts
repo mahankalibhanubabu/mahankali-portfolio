@@ -97,6 +97,62 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+  slug: "TaskTracker SRE",
+  name: "TaskTracker SRE",
+  tagline:
+    "An SLO-driven observability platform for Kubernetes, validated through deliberate chaos testing.",
+
+  problem:
+    "Most observability setups rely on naive resource thresholds (e.g., CPU above 80%) that flag symptoms rather than actual user impact, and are rarely tested against real failure conditions before being trusted in production. Without validating that alerts actually fire as expected, teams discover gaps in their monitoring only during a real incident.",
+
+  solution:
+    "Built a Kubernetes-native observability stack that instruments a microservice with custom Prometheus metrics, evaluates SLO and error-budget-based alerting rules instead of raw resource thresholds, and includes built-in chaos-injection endpoints to deliberately trigger failure conditions and verify that alerts, dashboards, and self-healing behavior work as intended.",
+
+  architecture: [
+    "FastAPI backend instrumented with custom Prometheus metrics (request counters, latency histograms, in-flight gauges) via middleware",
+    "Kubernetes Deployments manage the application with liveness/readiness probe separation and zero-downtime rolling updates (maxUnavailable: 0, maxSurge: 1)",
+    "Prometheus Operator (ServiceMonitor, PrometheusRule CRDs) deployed via Helm-managed kube-prometheus-stack scrapes metrics and evaluates SLO/error-budget alerting rules",
+    "Alertmanager routes and groups firing alerts by severity",
+    "Grafana visualizes request rate, error rate, latency percentiles, and error-budget burn",
+    "GitHub Actions pipeline tests, builds, scans (Trivy), and publishes Docker images to GitHub Container Registry",
+    "Built-in chaos-control endpoints (configurable error rate and latency injection) used to validate alerting and recovery behavior under controlled failure conditions"
+  ],
+
+  stack: [
+    "FastAPI",
+    "Python",
+    "Kubernetes",
+    "Docker",
+    "Prometheus",
+    "Grafana",
+    "Alertmanager",
+    "GitHub Actions",
+    "GitHub Container Registry",
+    "Kind",
+    "Helm",
+    "YAML"
+  ],
+
+  challenges: [
+    "Distinguishing liveness from readiness probes so pod restarts don't worsen an incident instead of resolving it",
+    "Moving from a hand-written Prometheus scrape config to the Prometheus Operator pattern (ServiceMonitor/PrometheusRule CRDs) used in production clusters",
+    "Designing alerting rules around SLOs and error budgets instead of raw CPU/memory thresholds",
+    "Building controlled failure-injection endpoints to test alerting behavior instead of assuming configured alerts work as written",
+    "Debugging label-selector mismatches between Kubernetes Services and ServiceMonitor resources"
+  ],
+
+  roadmap: [
+    "Add distributed tracing with OpenTelemetry and Grafana Tempo",
+    "Integrate Loki for centralized log correlation with metric spikes",
+    "Replace CPU-based HPA with KEDA for event/queue-driven autoscaling",
+    "Wire Alertmanager to a real notification channel (Slack)",
+    "Document measured chaos-test results (alert-fire latency, MTTR) with a written postmortem",
+    "Extend CI/CD to progressive delivery via Argo Rollouts, connecting this project to CanaryGuard"
+  ],
+
+  status: "Completed"
+},
+  {
   slug: "canaryguard",
   name: "CanaryGuard",
   tagline:
