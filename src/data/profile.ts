@@ -14,7 +14,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/mahankali-bhanubabu-devops-developer/",
   github: "https://github.com/mahankalibhanubabu",
   githubUser: "mahankalibhanubabu",
-  resumeUrl: "https://drive.google.com/file/d/1tnTOduazMlH5WyyaDkmAQmI93wzhDSmt/view?usp=sharing",
+  resumeUrl: "https://drive.google.com/file/d/1ZqMENwdyAM3Gdm15DYoXMSyHMN2maQZz/view?usp=sharing",
 } as const;
 
 export type ExperienceItem = {
