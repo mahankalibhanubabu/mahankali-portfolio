@@ -97,6 +97,83 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+  slug: "SentinelCart DevOps",
+  name: "SentinelCart DevOps",
+  tagline:
+    "A production-style cloud-native e-commerce platform built with AWS, Terraform, Kubernetes, CI/CD, and DevSecOps practices.",
+
+  problem:
+    "Deploying an application reliably requires more than containerizing the code. Teams need reproducible infrastructure, secure container registries, managed databases, Kubernetes orchestration, automated deployments, and security checks integrated into the software delivery lifecycle.",
+
+  solution:
+    "Built SentinelCart as a cloud-native e-commerce platform and designed an end-to-end DevOps workflow around it. The project provisions AWS infrastructure with Terraform, packages application services into Docker containers, stores images in Amazon ECR, deploys workloads to Amazon EKS, and integrates CI/CD and DevSecOps security checks into GitHub Actions.",
+
+  architecture: [
+    "React frontend and Node.js/Express backend containerized as independent Docker services",
+    "Terraform used to provision AWS infrastructure using reusable modules and environment-based configuration",
+    "Amazon VPC configured with public and private subnets, routing, security groups, and NAT connectivity",
+    "Amazon ECR used as the private container registry for versioned application images",
+    "Amazon RDS PostgreSQL used as the managed relational database layer",
+    "Amazon ElastiCache for Redis used as the caching layer",
+    "Amazon EKS provides the managed Kubernetes control plane for application workloads",
+    "Kubernetes Deployments, Services, ConfigMaps, Secrets, probes, and resource configurations manage application workloads",
+    "Helm packages Kubernetes manifests for repeatable application deployments",
+    "GitHub Actions automates application testing, Docker image builds, image publishing, and deployment workflows",
+    "DevSecOps pipeline integrates SAST, dependency scanning, secret detection, Terraform security scanning, and container image vulnerability scanning",
+    "Trivy is used to identify vulnerabilities in container images before deployment"
+  ],
+
+  stack: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "PostgreSQL",
+    "Redis",
+    "Docker",
+    "Kubernetes",
+    "Amazon EKS",
+    "Amazon ECR",
+    "Amazon RDS",
+    "Amazon ElastiCache",
+    "Amazon VPC",
+    "AWS IAM",
+    "Terraform",
+    "Helm",
+    "GitHub Actions",
+    "GitHub Container Registry",
+    "Trivy",
+    "Semgrep",
+    "Gitleaks",
+    "YAML",
+    "Git"
+  ],
+
+  challenges: [
+    "Designing AWS infrastructure with Terraform instead of manually creating cloud resources",
+    "Separating application, database, and cache layers across a secure AWS network architecture",
+    "Managing container images and deployment workflows across local Docker, ECR, and Kubernetes",
+    "Configuring EKS workloads with appropriate Kubernetes networking, probes, resources, and secrets",
+    "Debugging connectivity and configuration issues between Kubernetes workloads and managed AWS services",
+    "Integrating security scanning into CI/CD without treating security as a separate manual process",
+    "Handling infrastructure state, environment configuration, and dependency ordering in Terraform"
+  ],
+
+  roadmap: [
+    "Implement HTTPS with AWS Load Balancer Controller and ACM",
+    "Add external secrets management using AWS Secrets Manager",
+    "Introduce Argo CD for GitOps-based Kubernetes deployments",
+    "Implement Kubernetes Horizontal Pod Autoscaler and cluster autoscaling",
+    "Add Prometheus and Grafana for application and infrastructure observability",
+    "Implement centralized logging with Loki or an AWS-native logging solution",
+    "Add progressive delivery using Argo Rollouts",
+    "Implement blue-green or canary deployment strategies",
+    "Add automated database backup and disaster-recovery validation",
+    "Extend CI/CD with deployment verification and automated rollback"
+  ],
+
+  status: "In Progress"
+},
+  {
   slug: "TaskTracker SRE",
   name: "TaskTracker SRE",
   tagline:
